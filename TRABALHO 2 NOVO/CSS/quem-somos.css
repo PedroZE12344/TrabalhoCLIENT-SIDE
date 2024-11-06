@@ -1,0 +1,165 @@
+/* Reset básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    line-height: 1.6;
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+/* Cabeçalho */
+header {
+    background: linear-gradient(90deg, #fa0d0d, #3682f3);
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-size: 1.5rem;
+    color: white;
+    font-weight: bold;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+}
+
+nav ul li {
+    margin: 0 15px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: white;
+    transition: color 0.3s;
+}
+
+nav ul li a:hover {
+    color: #3682f3;
+}
+
+/* Menu Hamburguer */
+.menu-hamburguer {
+    display: none; /* Oculta no desktop */
+    flex-direction: column;
+    cursor: pointer;
+}
+
+.menu-hamburguer div {
+    height: 3px;
+    width: 25px;
+    background: white;
+    margin: 3px 0;
+}
+
+/* Main */
+main {
+    padding: 20px;
+}
+
+.sobre-nos {
+    background: #fff;
+    padding: 20px;
+    margin-bottom: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.missao-visao-valores {
+    background: #ffffff;
+    padding: 20px;
+    border-radius: 8px;
+    margin-bottom: 20px;
+}
+
+h1, h2 {
+    color: #fa0d0d;
+}
+
+h2 {
+    margin-top: 15px;
+}
+
+.equipe {
+    background: #d7d8d8;
+    padding: 20px;
+    border-radius: 8px;
+}
+
+.membros {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center; /* Centraliza os membros */
+}
+
+.membro {
+    background: #fff;
+    border-radius: 8px;
+    padding: 15px;
+    margin: 10px;
+    flex: 1 1 30%; /* Responsivo */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s;
+    text-align: center; /* Centraliza o texto */
+}
+
+.membro:hover {
+    transform: scale(1.05);
+}
+
+/* Estilo para as imagens dos membros */
+.membro img {
+    width: 150px; /* Largura fixa */
+    height: 150px; /* Altura fixa, igual à largura */
+    object-fit: cover; /* Ajusta a imagem para cobrir o espaço */
+    border-radius: 8px; /* Arredonda os cantos da imagem */
+}
+
+/* Rodapé */
+footer {
+    background: #333;
+    color: white;
+    padding: 20px;
+    text-align: center;
+    margin-top: 50px; /* Espaço acima do rodapé */
+}
+
+.redes-sociais a {
+    margin: 0 10px;
+    color: #3682f3;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.redes-sociais a:hover {
+    color: #fa0d0d;
+}
+
+/* Contato */
+.contato p {
+    margin: 5px 0;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    nav ul {
+        flex-direction: column;
+        display: none; /* Ocultar no mobile */
+    }
+
+    .menu-hamburguer {
+        display: flex; /* Mostrar menu hamburguer */
+    }
+
+    .menu-hamburguer.active + nav ul {
+        display: flex; /* Mostrar menu ao clicar */
+    }
+}

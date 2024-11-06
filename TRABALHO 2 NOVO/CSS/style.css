@@ -1,0 +1,207 @@
+/* Reset básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    line-height: 1.7;
+    background-color: #f4f4f4;
+    color: #333; /* Cor padrão do texto */
+}
+
+/* Cabeçalho */
+header {
+    background: linear-gradient(90deg, #f10f0f, #3682f3); /* Gradiente vibrante */
+    color: white;
+    padding: 10px 20px;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+}
+
+.logo {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: flex-end;
+}
+
+nav ul li {
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+nav ul li a:hover {
+    color: #f10f0f; /* Cor dourada ao passar o mouse */
+}
+
+.menu-hamburguer {
+    display: none;
+}
+
+/* Banner */
+.banner {
+    background: url('../IMAGES/logotipo-de-barbearia.jpg') no-repeat center center/cover;
+    height: 300px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    text-align: center;
+    position: relative;
+}
+
+.banner-text {
+    background: rgba(0, 0, 0, 0.5); /* Fundo semi-transparente para melhor legibilidade */
+    padding: 20px;
+    border-radius: 10px; /* Arredondar os cantos */
+}
+
+.banner h1 {
+    font-size: 36px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
+}
+
+.banner p {
+    font-size: 20px;
+}
+
+/* Main */
+main {
+    padding: 80px 20px 20px;
+}
+
+.destaques {
+    margin: 20px 0;
+}
+
+.destaques h2 {
+    color: #f10f0f; /* Cor do título em destaque */
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.blocos {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.bloco {
+    background: #ffffff; /* Fundo branco */
+    border: 2px solid #f10f0f; /* Borda vermelha */
+    border-radius: 10px;
+    padding: 20px;
+    margin: 10px;
+    flex: 1;
+    min-width: 200px;
+    text-align: center;
+    transition: transform 0.3s, box-shadow 0.3s;
+    position: relative; /* Para o posicionamento do conteúdo */
+}
+
+.bloco img {
+    width: 100%; /* Faz com que a imagem preencha todo o bloco */
+    height: 200px; /* Altura fixa para manter os quadrados */
+    object-fit: cover; /* Mantém a proporção da imagem, cortando o excesso */
+    border-radius: 5px; /* Arredonda os cantos da imagem */
+}
+
+.bloco:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.mapa {
+    margin: 40px 0;
+    text-align: center;
+}
+
+#map {
+    width: 100%;
+    height: 300px;
+    background: #ddd; /* Placeholder para o mapa */
+    margin-bottom: 20px;
+}
+
+button {
+    padding: 10px 20px;
+    background: #3682f3; /* Azul vibrante */
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 18px;
+    transition: background 0.3s;
+}
+
+button:hover {
+    background: #f10f0f; /* Muda para vermelho ao passar o mouse */
+}
+
+/* Rodapé */
+footer {
+    background: #333; /* Rodapé escuro */
+    color: white;
+    text-align: center;
+    padding: 20px 0;
+}
+
+.redes-sociais a {
+    margin: 0 10px;
+    color: #f10f0f; /* Links em vermelho */
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.redes-sociais a:hover {
+    color: #3682f3; /* Muda para dourado ao passar o mouse */
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    nav ul {
+        flex-direction: column;
+        position: absolute;
+        top: 60px;
+        right: 0;
+        background: #333; /* Fundo escuro no mobile */
+        display: none; /* Ocultar por padrão */
+        width: 200px;
+    }
+
+    nav ul li {
+        margin: 10px 0;
+    }
+
+    .menu-hamburguer {
+        display: flex;
+        flex-direction: column;
+        cursor: pointer;
+    }
+
+    .menu-hamburguer div {
+        width: 30px;
+        height: 3px;
+        background: white;
+        margin: 4px 0;
+    }
+
+    /* Mostrar o menu ao clicar */
+    nav ul.show {
+        display: flex;
+    }
+}
